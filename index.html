@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  
+  <title>Iron Man Suit Details</title>
+ 
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body translate="no" >
+
+<div class="featured-img-wrap">
+  <img src="ironman.png" alt="img">
+
+
+  <ul class="feature-notes">
+    <li class="feature-box right-top" style="top: 15%; right: 60%;">
+      <a href="javascript:;" class="plus-icon">+</a>
+      <div class="feature-text">TITANIUM HELMET</div>
+    </li>
+
+
+    <li class="feature-box right-top short" style="top: 40%; left: 45%;">
+      <a href="javascript:;" class="plus-icon">+</a>
+      <div class="feature-text">SMART MISSILE</div>
+    </li>
+
+
+    <li class="feature-box left-top" style="top: 45%; left: 15%;">
+      <a href="javascript:;" class="plus-icon">+</a>
+      <div class="feature-text">SMART MISSILE</div>
+    </li>
+
+
+    <li class="feature-box right-bottom" style="top: 45%; right: 23%;">
+      <a href="javascript:;" class="plus-icon">+</a>
+      <div class="feature-text">REPULSOR RAYS</div>
+    </li>
+
+
+    <li class="feature-box left-top" style="top: 65%; left: 10%;">
+      <a href="javascript:;" class="plus-icon">+</a>
+      <div class="feature-text">VIBRANIUM CORE ARC REACTOR</div>
+    </li>
+
+
+    <li class="feature-box right-center lengthy" style="bottom: 15%; left: 55%;">
+      <a href="javascript:;" class="plus-icon">+</a>
+      <div class="feature-text">JET PACK</div>
+    </li>
+
+
+    <li class="feature-box left-center short" style="bottom: 72%; left: 22%;">
+      <a href="javascript:;" class="plus-icon">+</a>
+      <div class="feature-text">LIQUID CRYSTAL DISPLAY</div>
+    </li>
+  </ul>
+
+</div>
+    
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script id="rendered-js" >
+jQuery(document).ready(function ($) {
+  $('.feature-box').children('a').on('click', function () {
+    var selectedPoint = $(this).parent('li');
+    if (selectedPoint.hasClass('is-open')) {
+      selectedPoint.removeClass('is-open');
+    } else {
+      selectedPoint.addClass('is-open').siblings('.feature-box.is-open').removeClass('is-open');
+    }
+  });
+
+});
+</script>
+
+  
+
+</body>
+
+</html>
+ 
